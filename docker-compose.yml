@@ -1,0 +1,12 @@
+services:
+  flask-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: flask-app
+    ports:
+      - "5000:5000"
+    environment:
+      APP_NAME: Python Flask Docker App
+      FLASK_DEBUG: "false"
+    restart: unless-stopped
